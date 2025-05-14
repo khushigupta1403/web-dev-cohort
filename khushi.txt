@@ -1,0 +1,232 @@
+                                                                        SECTION A
+Ans1: vcs stands for version control system. in vcs we can add features without affecting the main code and if there is error in new version so we can go back to the previous version and different people can work on the same project.
+Ans2: centralised vcs and distributed vcs is a type of vcs.  centralised vcs work on server if it is corrupted then all the code is lost or damaged whereas distributed vcs is a combination of centralized and local vcs in these it can work on computer and server and it is more safer because it has a copy of code in computer.
+Ans3: git is a free and open source.git is a distributed version control system that help to do changes in computer and github is a online website where we can submit the project online.
+Ans4: The staging area is a space where Git temporarily holds changes before they are committed to the project history. stagging area also called as index.
+Ans5: The .git folder is a hidden folder that helps to track the changes in the code and .git folder contains Commits,Branches,Configuration,Staging info etc.
+Ans6: in git branching we can create a duplicate copy without affecting the main code.we can make changes or add new features in duplicate code.syntax for git branch is git branch branch-name and syntax for switching branch is git checkout branch-name.
+Ans7: in git reset we Just undo the commit, but your file changes are still there. but in git reset--hard we undo the commit but and deletes all the changes.
+Ans8: In a squash merge we can combine all small- small commits into a one big commit if we cannot merge a small small commit so it will create a confusion. we use squash merge to keep the main branch history clean.
+Ans9: git rebase is a Git command that lets you move your work (commits) on top of another branch.we use git rebase to  make your Git history cleaner and easier to read, especially before merging your branch. example is whatspp messages.
+                                                                         SECTION B
+PS C:\Users\khush\WEB DEV COHORT> echo "This is my first Git file." > note.txt
+>> 
+PS C:\Users\khush\WEB DEV COHORT> git add note.txt
+PS C:\Users\khush\WEB DEV COHORT> git commit -m "Add note.txt with initial content"
+[feature-rebase 3b87842] Add note.txt with initial content
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 note.txt
+PS C:\Users\khush\WEB DEV COHORT> ^C
+PS C:\Users\khush\WEB DEV COHORT> git status
+>> 
+On branch feature-rebase
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Worksheet of git and github/SectionA.txt
+        modified:   Worksheet of git and github/git-learning/login.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\khush\WEB DEV COHORT> git log
+>>
+commit 3b8784295a0636749c38143957f1074b6cabee8c (HEAD -> feature-rebase)
+Author: khushigupta1403 <khushigupta25nov@gmail.com>
+Date:   Wed May 14 23:29:48 2025 +0530
+
+    Add note.txt with initial content
+
+commit 2e4838a7b14a95f9cf78049bda0988633c479b3a
+Author: khushigupta1403 <khushigupta25nov@gmail.com>
+Date:   Wed May 14 19:35:51 2025 +0530
+
+    Add rebase.txt in feature-rebase branch
+
+commit 6ee3d0301807838b1c9e3968a29faa0a5cacbc95 (main)
+Author: khushigupta1403 <khushigupta25nov@gmail.com>
+Date:   Wed May 14 19:36:20 2025 +0530
+
+    Add mainchange.txt in main branch
+
+commit 7a5edb8a5b4644c3ecd2abd75325b5c10f6a1c15 (origin/main)
+Author: khushigupta1403 <khushigupta25nov@gmail.com>
+Date:   Wed May 14 19:29:37 2025 +0530
+
+TASK2:PS C:\Users\khush\WEB DEV COHORT> echo "console.log('Hello World');" > hello.js
+>> 
+PS C:\Users\khush\WEB DEV COHORT> git add hello.js
+PS C:\Users\khush\WEB DEV COHORT> git commit -m "Add hello.js"
+[feature-rebase 1bcdb54] Add hello.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.js
+PS C:\Users\khush\WEB DEV COHORT> git reset --hard HEAD~1
+HEAD is now at 3b87842 Add note.txt with initial content
+PS C:\Users\khush\WEB DEV COHORT> git log --oneline
+3b87842 (HEAD -> feature-rebase) Add note.txt with initial content
+2e4838a Add rebase.txt in feature-rebase branch
+6ee3d03 (main) Add mainchange.txt in main branch
+7a5edb8 (origin/main) Add about.html with 3 lines (squashed)
+7be0872 (feature-login) Add login.html for login feature
+b338fd4 fatal: User cancelled dialog. To https://github.com/khushigupta1403/git-learning-repo.git  ! [rejected]        main -> main (fetch first) error: failed to push some refs to 'https://github.com/khushigupta1403/git-learning-repo.git' hint: Updates were rejected because the remote contains work that you do not hint: have locally. This is usually caused by another repository pushing to hint: the same ref. If you want to integrate the remote changes, use hint: 'git pull' before pushing again. Merge branch 'main' of https://github.com/khushigupta1403/git-learning-repo ~                                     
+                                                                                     ~                                     
+:
+3b87842 (HEAD -> feature-rebase) Add note.txt with initial content
+2e4838a Add rebase.txt in feature-rebase branch
+6ee3d03 (main) Add mainchange.txt in main branch
+7a5edb8 (origin/main) Add about.html with 3 lines (squashed)
+7be0872 (feature-login) Add login.html for login feature
+b338fd4 fatal: User cancelled dialog. To https://github.com/khushigupta1403/git-learning-repo.git  ! [rejected]        main -> main (fetch first) error: failed to push some refs to 'https://github.com/khushigupta1403/git-learning-repo.git' hint: Updates were rejected because the remote contains work that you do not hint: have locally. This is usually caused by another repository pushing to hint: the same ref. If you want to integrate the remote changes, use hint: 'git pull' before pushing again. Merge branch 'main' of https://github.com/khushigupta1403/git-learning-repo ~                                                                                                                          ~                                                                                                                          ~                                     
+                                                                                     ~                                     
+                                                                                     .git/MERGE_MSG [unix] (18:52 14/05/2025)                                                                            1,1 All "~/WEB DEV COHORT/.git/MERGE_MSG" [unix] 6L, 302Merge branch 'main' of https://github.com/khushigupta1403/git-learning-repo
+746d498 Initial commit from local repo
+11ff9a7 Initial commit
+2c9e1b3 Initial commit
+5758bc8 Add mynotes.txt with git definition
+PS C:\Users\khush\WEB DEV COHORT> git push origin feature-rebase --force
+>>
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 1.20 KiB | 136.00 KiB/s, done.
+Total 13 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature-rebase' on GitHub by visiting:
+remote:      https://github.com/khushigupta1403/git-learning-repo/pull/new/feature-rebase
+remote:
+To https://github.com/khushigupta1403/git-learning-repo.git
+ * [new branch]      feature-rebase -> feature-rebase
+PS C:\Users\khush\WEB DEV COHORT> ^C
+PS C:\Users\khush\WEB DEV COHORT>
+TASK3:
+PS C:\Users\khush\WEB DEV COHORT> git remote add origin https://github.com/YOUR_USERNAME/git-practice-repo.git
+>> 
+error: remote origin already exists.
+PS C:\Users\khush\WEB DEV COHORT> git remote -v
+>> 
+origin  https://github.com/khushigupta1403/git-learning-repo.git (fetch)
+origin  https://github.com/khushigupta1403/git-learning-repo.git (push)
+PS C:\Users\khush\WEB DEV COHORT> git push -u origin main
+>> 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/khushigupta1403/git-learning-repo.git
+   7a5edb8..6ee3d03  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\khush\WEB DEV COHORT> git push -u origin feature-rebase
+>>
+branch 'feature-rebase' set up to track 'origin/feature-rebase'.
+Everything up-to-date
+
+SECTION C
+task4:PS C:\Users\khush\WEB DEV COHORT> echo "<h1>Login Page</h1>" > login.html
+PS C:\Users\khush\WEB DEV COHORT> git add login.html
+>> 
+PS C:\Users\khush\WEB DEV COHORT> git commit -m "Add login.html for login feature"
+[feature-rebase 53d821a] Add login.html for login feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 login.html
+PS C:\Users\khush\WEB DEV COHORT> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\khush\WEB DEV COHORT> git merge feature-login
+Already up to date.
+PS C:\Users\khush\WEB DEV COHORT>
+
+
+
+PS C:\Users\khush\WEB DEV COHORT> git reset --hard HEAD~3
+>> 
+HEAD is now at 6ee3d03 Add mainchange.txt in main branch
+PS C:\Users\khush\WEB DEV COHORT> echo "About Page - Part 1" > about1.html
+>> git add about1.html
+>> git commit -m "Add about1.html"
+>> 
+>> echo "About Page - Part 2" > about2.html
+>> git add about2.html
+>> git commit -m "Add about2.html"
+>> 
+>> echo "About Page - Part 3" > about3.html
+>> git add about3.html
+>> git commit -m "Add about3.html"
+>>
+[main 3bd1cb8] Add about1.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 about1.html
+[main 9125fb9] Add about2.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 about2.html
+[main 3aed420] Add about3.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 about3.html
+PS C:\Users\khush\WEB DEV COHORT> git push origin main
+>>
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 863 bytes | 143.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/khushigupta1403/git-learning-repo.git
+   6ee3d03..3aed420  main -> main
+PS C:\Users\khush\WEB DEV COHORT> git branch -d feature-about
+>>
+error: the branch 'feature-about' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D feature-about'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+PS C:\Users\khush\WEB DEV COHORT>
+
+
+
+
+PS C:\Users\khush\WEB DEV COHORT> echo "This is from feature-rebase" > rebase.txt
+PS C:\Users\khush\WEB DEV COHORT> git add rebase.txt
+PS C:\Users\khush\WEB DEV COHORT> git commit -m "Add rebase.txt in feature-rebase branch"
+[main 670ee75] Add rebase.txt in feature-rebase branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 rebase.txt
+PS C:\Users\khush\WEB DEV COHORT> git checkout main
+>> echo "This is from main" > mainchange.txt
+>> git add mainchange.txt
+>> git commit -m "Add mainchange.txt in main branch"
+>> 
+Already on 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+[main ce5a170] Add mainchange.txt in main branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mainchange.txt
+PS C:\Users\khush\WEB DEV COHORT> git checkout feature-rebase
+>> git rebase main
+>>
+Switched to branch 'feature-rebase'
+Your branch is ahead of 'origin/feature-rebase' by 1 commit.
+  (use "git push" to publish your local commits)
+Successfully rebased and updated refs/heads/feature-rebase.
+PS C:\Users\khush\WEB DEV COHORT> git log --oneline
+>>
+5d8a951 (HEAD -> feature-rebase) Add login.html for login feature
+1a230b9 Add note.txt with initial content
+0ce720d Add rebase.txt in feature-rebase branch
+ce5a170 (main) Add mainchange.txt in main branch
+670ee75 Add rebase.txt in feature-rebase branch
+3aed420 (origin/main) Add about3.html
+9125fb9 Add about2.html
+3bd1cb8 Add about1.html
+6ee3d03 Add mainchange.txt in main branch
+7a5edb8 Add about.html with 3 lines (squashed)
+7be0872 (feature-login) Add login.html for login feature
+:
+5d8a951 (HEAD -> feature-rebase) Add login.html for login feature
+1a230b9 Add note.txt with initial content
+0ce720d Add rebase.txt in feature-rebase branch
+ce5a170 (main) Add mainchange.txt in main branch
+670ee75 Add rebase.txt in feature-rebase branch
+3aed420 (origin/main) Add about3.html
+9125fb9 Add about2.html
+3bd1cb8 Add about1.html
+6ee3d03 Add mainchange.txt in main branch
+7a5edb8 Add about.html with 3 lines (squashed)
+7be0872 (feature-login) Add login.html for login feature
+:
+
